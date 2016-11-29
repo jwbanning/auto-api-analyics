@@ -1,0 +1,18 @@
+{
+  "FeatureUsed": [
+    {
+      "click": [ "#test", "#test2", "#test4", "#wookie" ],
+      "sort": [".chooser-option-current.js-chooser-option-current"],
+      "filter": [],
+      "submission": [],
+      "search": [],
+      "ask":[],
+      "close":[],
+      "write":[],
+      "hover":[],
+      "paginate":[]     
+    }
+  ],
+  "PageView": "",
+  "UCG_container": ""
+}
