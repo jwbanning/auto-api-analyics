@@ -9,7 +9,7 @@
       "ask":[],
       "close":[],
       "write":[],
-      "hover":[],
+      "hover":[".test", "#foo"],
       "paginate":[]     
     }
   ],

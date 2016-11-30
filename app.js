@@ -3,6 +3,10 @@ var app = express();
 var fs = require('fs');
 
 
+app.set('views', './views');
+app.locals.basedir = './views';
+app.set('view engine', 'pug');
+
 var pdpObject = {
             type: "some type",
             brand: "some Brand",
@@ -12,7 +16,8 @@ var pdpObject = {
         };
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.render('index', { title: 'Hey', message: 'Hello there!' });
+  //res.send('Hello World!');  //to do render a different template
 });
 
 // READ THE TAGS.JSON FILE
@@ -28,9 +33,14 @@ fs.readFile('tags.json', 'utf8', function (err,data) {
     Object.keys(obj.FeatureUsed[0]).forEach(function(k) {
       //console.log(k);
 
+      var action = 'click';
+      if (k =='hover'){
+        action='hover';
+      }
+
       for (var i = 0, len = obj.FeatureUsed[0][k].length; i < len; i++) {
       //access the PDP object to get general data. 
-      console.log('$( "' + k + '" ).click(function() {' + '\n' +    //TO DO - change out the click to hover on that event
+      console.log('$( "' + obj.FeatureUsed[0][k][i] + '" ).' + action + '(function() {' + '\n' +    //TO DO - change out the click to hover on that event
         'BV.pixel.trackEvent(\'Feature\', { '+ '\n' +
           'type: \'Used\',' + '\n' +
           'name: \'' + k + '\'\n' +
