@@ -4,7 +4,7 @@ var fs = require('fs');
 
 
 app.set('views', './views');
-app.locals.basedir = './views';
+app.locals.basedir = '.';
 app.set('view engine', 'pug');
 
 var pdpObject = {
@@ -16,7 +16,7 @@ var pdpObject = {
         };
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hey', message: 'Hello there!' });
+  res.render('index', { title: '~Auto-generated API Analytics'});
   //res.send('Hello World!');  //to do render a different template
 });
 
