@@ -18,6 +18,9 @@ html {
 .wrapper{
     margin:0 100px;
 }
+.Grid-col.u-size-6-12-m.u-size-7-12-l{
+    float:left;
+}
 .info_box_container{
     position: absolute;
     right: 20px;

@@ -1,15 +1,15 @@
 {
   "FeatureUsed": [
     {
-      "click": [ "#test", "#test2", "#test4", "#wookie" ],
-      "sort": [".chooser-option-current.js-chooser-option-current"],
+      "click": [ ".test" ],
+      "sort": [],
       "filter": [],
       "submission": [],
       "search": [],
       "ask":[],
       "close":[],
       "write":[],
-      "hover":[".test", "#foo"],
+      "hover":[],
       "paginate":[]     
     }
   ],
