@@ -1,7 +1,7 @@
 {
   "FeatureUsed": [
     {
-      "click": [ ".test" ],
+      "click": [ ".test", ".review-filter-toggle", "review-filter-toggle", ".block-list.module.li.input",".chooser-option.js-chooser-option",".js-write-review",".btn-vote.js-btn-vote-yes",".btn-vote.js-btn-vote-no",".customer-review-report-btn",".js-ellipsis-read-more.ellipsis-read-more.a",".review-badge",".js-reviews-see-all.arrow-link",".paginator-list.ul.li.a",".js-rating-filter.rating-filter"],
       "sort": [],
       "filter": [],
       "submission": [],
