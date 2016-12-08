@@ -1,24 +1,21 @@
 html
-  head
-    script(src='http://code.jquery.com/jquery-latest.js')
-    script(type="text/javascript")= scripts
+    head
+        script(src='http://code.jquery.com/jquery-latest.js')
+        script(type="text/javascript")= scripts
 
-    title= title
-
-    style
-        include ../public/css/main.css
-        include ../public/css/histogram.css
-        include ../public/css/fonts.css
-    
+        title= title
+        
+        link(href='/css/main.css', rel='stylesheet')
+        link(href='/css/histogram.css', rel='stylesheet')
+        link(href='/css/fonts.css', rel='stylesheet')
+                
     body
         include includes/header.pug
         .wrapper
 
-        h1(class='test' style='color:red') Hello
-
-        include includes/product_desc.pug
-        include includes/grid_review_header.pug
-        include includes/ugc_content.pug
+            include includes/product_desc.pug
+            include includes/grid_review_header.pug
+            include includes/ugc_content.pug
 
 
         include includes/footer.pug

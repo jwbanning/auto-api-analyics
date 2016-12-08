@@ -1,0 +1,76 @@
+<div class="js-review-filters review-filters expander hide-content display-inline-block-m">
+    <div class="Grid">
+        <div class="Grid-col u-size-9-12-m review-filter-toggle-container">
+            <div class="review-filter-toggle">
+                <a class="js-expander-toggle more-link" bveventtype="expand-retract" data-value="more" href="#" id="WMItemAgeShowFltrLnk">Show Filters</a>
+            </div>
+        </div>
+        <div class="Grid-col u-size-3-12-m review-sort">
+            <label class="label font-semibold">Sort by</label>
+            <div class="chooser js-chooser chooser-fixed-width chooser-alt" style="width: 148px;">
+                <div class="chooser-option-list rendered">
+                    <div class="chooser-option-current js-chooser-option-current" role="button" data-chooser-value="initial" bveventtype="sort" tabindex="0" aria-expanded="false">Most helpful
+                    </div>
+                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="helpful" bveventtype="sort" tabindex="-1">Most helpful</button>
+                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-desc" bveventtype="sort" tabindex="-1">Newest to oldest</button>
+                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="submission-asc" bveventtype="sort" tabindex="-1">Oldest to newest</button>
+                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-desc" bveventtype="sort" tabindex="-1">High to low rating</button>
+                    <button class="chooser-option js-chooser-option" type="button" data-chooser-value="rating-asc" bveventtype="sort" tabindex="-1">Low to high rating</button>
+                </div>
+            </div><select class="js-selector js-reviews-sort chooser-alt chooser-fixed-width visuallyhidden" tabindex="-1" aria-hidden="true">
+                <option selected="" value="helpful">Most helpful</option>
+                <option value="submission-desc">Newest to oldest</option>
+                <option value="submission-asc">Oldest to newest</option>
+                <option value="rating-desc">High to low rating</option>
+                <option value="rating-asc">Low to high rating</option>
+            </select>
+        </div>
+    </div>
+    <div class="expander-content module age-gender-filters">
+        <div class="Grid">
+            <div class="Grid-col u-size-4-12-m pull-left">
+                <p class="heading-e">
+                    Age
+                </p>
+                <div class="Grid grid-padded js-reviews-filter js-age-filter">
+                    <div class="Grid-col u-size-6-12-m">
+                        <ul class="block-list module">
+                            <li class="option" data-filter="age:18-24">
+                                <input type="checkbox" bveventtype="filter" name="age-1" id="age-1" value="contextdatavalue_age:18-24"> <label for="age-1">18-24</label>
+                            </li>
+                            <li class="option" data-filter="age:25-34">
+                                <input type="checkbox" bveventtype="filter" name="age-2" id="age-2" value="contextdatavalue_age:25-34"> <label for="age-2">25-34</label>
+                            </li>
+                            <li class="option" data-filter="age:35-44">
+                                <input type="checkbox" bveventtype="filter" name="age-3" id="age-3" value="contextdatavalue_age:35-44"> <label for="age-3">35-44</label>
+                            </li>
+                        </ul>
+                    </div>
+                    .Grid-col u-size-6-12-m
+                        ul.block-list.module
+                            li(class='option' data-filter='age:45-54')
+                                <input type="checkbox" bveventtype="filter" name="age-4" id="age-4" value="contextdatavalue_age:45-54"> <label for="age-4">45-54</label>
+                            
+                            li class='option' data-filter='age:55-64')
+                                <input type="checkbox" bveventtype="filter" name="age-5" id="age-5" value="contextdatavalue_age:55-64"> <label for="age-5">55-64</label>
+                            
+                            li class='option' data-filter='age:65%2B')
+                                <input type="checkbox" bveventtype="filter" name="age-6" id="age-6" value="contextdatavalue_age:65%2B"> <label for="age-6">65 and older</label>
+
+                </div>
+            </div>
+            <div class="Grid-col u-size-2-12-m pull-left">
+                <p class="heading-e">
+                    Gender
+                </p>
+                ul.block-list.module.js-reviews-filter.js-gender-filter
+                    li.option(data-filter="gender:male")
+                        <input type="checkbox" bveventtype="filter" name="gender-1" id="gender-1" value="contextdatavalue_gender:male"> <label for="gender-1">Male</label>
+                    <li class="option" data-filter="gender:female">
+                        <input type="checkbox" bveventtype="filter" name="gender-2" id="gender-2" value="contextdatavalue_gender:female"> <label for="gender-2">Female</label>
+                    </li>
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -5060,6 +5060,10 @@ to {
 }
 }
 
+.grid.review-header{
+    text-align:left;
+}
+
 .Grid {
     display:block;
     margin:0;
@@ -5083,13 +5087,13 @@ to {
 }
 
 @media (min-width:85.25em) {
-.Grid--gutters {
-    margin:0 -10px
-}
+    .Grid--gutters {
+        margin:0 -10px
+    }
 
-.Grid--gutters>.Grid-col {
-    padding:0 10px
-}
+    .Grid--gutters>.Grid-col {
+        padding:0 10px
+    }
 }
 
 .Grid-col {

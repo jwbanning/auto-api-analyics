@@ -16,13 +16,12 @@ var pdpObject = {
             brand: "someBrand",
             productId: "ABCDEFGHIJKL",
             bvProduct: "RatingsAndReviews",
-            categoryId: 'some category'
+            categoryId: 'some category',
+            rootCategoryId: 'root down'
         };
 
-var jsOutputTest = '$( document ).ready(function() {console.log( \'ready!\' );$( \'.test\' ).click(function() {alert(\'foo\');console.log(\'fdffdf\');});});';
 var jsOutputFirst ='$( document ).ready(function() { ';
 var jsOutput ='';
-var jsOutputEnd = '});';
 
 // READ THE TAGS.JSON FILE
 fs.readFile('tags.json', 'utf8', function (err,data) {
@@ -57,27 +56,11 @@ fs.readFile('tags.json', 'utf8', function (err,data) {
         '});' + '\n' +
       '});';
 
-console.log(jsOutput);
-      // console.log('$( "' + obj.FeatureUsed[0][k][i] + '" ).' + action + '(function() {' + '\n' +    //TO DO - change out the click to hover on that event
-      //   'BV.pixel.trackEvent(\'Feature\', { '+ '\n' +
-      //     'type: \'Used\',' + '\n' +
-      //     'name: \'' + k + '\'\n' +
-      //     'brand: \'' + pdpObject.brand + '\',' + '\n' +
-      //     'productId: \'' + pdpObject.productId + '\',' + '\n' +
-      //     'bvProduct: \'' + pdpObject.bvProduct + '\',' + '\n' +
-      //     'categoryId: \'' + pdpObject.categoryId + '\',' + '\n' +
-      //     'detail1: \'\',' + '\n' +  //TO DO get the detail1 of the click event.. is this on the HTML?
-      //     'detail2: \'\'' + '\n' +   //TO DO get the detail2 of the click event.. is this on the HTML?
-      //   '});' + '\n' +
-      // '});' );
+      //console.log(jsOutput);
 
       }
 
     });
-
-out = jsOutputFirst + jsOutput + '});';
-
-console.log(out);
 
 //###########################
 // PAGE VIEW
@@ -86,79 +69,20 @@ console.log(out);
 //###########################
 // UGC CONTAINER
 //###########################
+          var trackUGC = 'BV.pixel.trackViewedCGC({' + '\n' +
+           'productId: \'' + pdpObject.productId + '\',' + '\n' +
+           'bvProduct: \'' + pdpObject.bvProduct + '\',' + '\n' +
+           'brand: \'' + pdpObject.brand + '\',' + '\n' +
+           'categoryId: \'' + pdpObject.categoryId + '\',' + '\n' +
+           'rootCategoryId: \'' + pdpObject.rootCategoryId + '\',' + '\n' +
+           '}, {' + '\n' +
+              'minPixels: 100,' + '\n' +
+              'minTime: 5000,' + '\n' +
+              'containerId: \'' + obj.UCG_container + '\'' + '\n' +
+      '});';
 
-
-    // var clicksFeature = obj.FeatureUsed[0].click;
-    // var sortFeature = obj.FeatureUsed[0].sort;
-    // var filterFeature = obj.FeatureUsed[0].filter;
-    // var searchFeature = obj.FeatureUsed[0].search;
-    // var submissionFeature = obj.FeatureUsed[0].submission;
-    // var askFeature = obj.FeatureUsed[0].ask;
-    // var closeFeature = obj.FeatureUsed[0].close;
-    // var writeFeature = obj.FeatureUsed[0].write;
-    // var hoverFeature = obj.FeatureUsed[0].hover;
-    // var paginateFeature = obj.FeatureUsed[0].paginate;
-
-//###########################
-//CLICK FEATURE
-//###########################
-    // for (var i = 0, len = clicksFeature.length; i < len; i++) {
-    //   console.log(clicksFeature[i]);
-    //   //access the PDP object to get general data. 
-    //   console.log('$( "' + clicksFeature[i]+ '" ).click(function() {' + '\n' +
-    //     'BV.pixel.trackEvent(\'Feature\', { '+ '\n' +
-    //       'type: \'Used\',' + '\n' +
-    //       'name: \'Click\', ' + '\n' +
-    //       'brand: \'' + pdpObject.brand + '\',' + '\n' +
-    //       'productId: \'' + pdpObject.productId + '\',' + '\n' +
-    //       'bvProduct: \'' + pdpObject.bvProduct + '\',' + '\n' +
-    //       'categoryId: \'' + pdpObject.categoryId + '\',' + '\n' +
-    //       'detail1: \'\',' + '\n' +  //TO DO get the detail1 of the click event.. is this on the HTML?
-    //       'detail2: \'\'' + '\n' +   //TO DO get the detail2 of the click event.. is this on the HTML?
-    //     '});' + '\n' +
-    //   '});' );
-
-    //} //end for loop
-
-//###########################
-//SORT FEATURE
-//###########################
-  // for (var i = 0, len = sortFeature.length; i < len; i++) {
-  //       console.log(sortFeature[i]);
-  //       console.log('$( "' + sortFeature[i]+ '" ).click(function() {' + '\n' +
-  //         'BV.pixel.trackEvent(\'Feature\', { '+ '\n' +
-  //           'type: \'Used\',' + '\n' +
-  //           'name: \'Sort\', ' + '\n' +
-  //           'brand: \'' + pdpObject.brand + '\',' + '\n' +
-  //           'productId: \'' + pdpObject.productId + '\',' + '\n' +
-  //           'bvProduct: \'' + pdpObject.bvProduct + '\',' + '\n' +
-  //           'categoryId: \'' + pdpObject.categoryId + '\',' + '\n' +
-  //           'detail1: \'Profile\',' + '\n' +
-  //           'detail2: \'\'' + '\n' +
-  //         '});' + '\n' +
-  //       '});' );
-
-  //     } //end for loop
-
-//###########################
-//FILTER FEATURE
-//###########################
-  // for (var i = 0, len = filterFeature.length; i < len; i++) {
-  //       console.log(filterFeature[i]);
-  //       console.log('$( "' + sortFeature[i]+ '" ).click(function() {' + '\n' +
-  //         'BV.pixel.trackEvent(\'Feature\', { '+ '\n' +
-  //           'type: \'Used\',' + '\n' +
-  //           'name: \'Filter\', ' + '\n' +
-  //           'brand: \'' + pdpObject.brand + '\',' + '\n' +
-  //           'productId: \'' + pdpObject.productId + '\',' + '\n' +
-  //           'bvProduct: \'' + pdpObject.bvProduct + '\',' + '\n' +
-  //           'categoryId: \'' + pdpObject.categoryId + '\',' + '\n' +
-  //           'detail1: \'Profile\',' + '\n' +
-  //           'detail2: \'\'' + '\n' +
-  //         '});' + '\n' +
-  //       '});' );
-
-  //     } //end for loop
+//out = jsOutputFirst + trackUGC + jsOutput + '});';
+out = jsOutputFirst + jsOutput + '});';
 
 });
 

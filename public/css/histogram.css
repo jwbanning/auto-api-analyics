@@ -8038,10 +8038,13 @@
 }
 
 @media (min-width:48em) {
-.review-summary {
-    margin:35px 0 8px;
-    text-align:left
-}
+    .review-summary {
+        margin:35px 0 8px;
+        text-align:left
+    }
+    .review-summary.grid{
+        height:auto!important;
+    }
 }
 
 .review-product-name {

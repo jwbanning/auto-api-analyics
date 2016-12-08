@@ -1,18 +1,18 @@
 {
   "FeatureUsed": [
     {
-      "click": [ ".test", ".review-filter-toggle", "review-filter-toggle", ".block-list.module.li.input",".chooser-option.js-chooser-option",".js-write-review",".btn-vote.js-btn-vote-yes",".btn-vote.js-btn-vote-no",".customer-review-report-btn",".js-ellipsis-read-more.ellipsis-read-more.a",".review-badge",".js-reviews-see-all.arrow-link",".paginator-list.ul.li.a",".js-rating-filter.rating-filter"],
-      "sort": [],
-      "filter": [],
+      "click": [".block-list.module.li.input",".js-write-review",".btn-vote.js-btn-vote-yes",".btn-vote.js-btn-vote-no",".customer-review-report-btn",".js-ellipsis-read-more.ellipsis-read-more.a",".review-badge",".js-reviews-see-all.arrow-link"],
+      "sort": [".chooser-option.js-chooser-option"],
+      "filter": [".review-filter-toggle", ".js-rating-filter.rating-filter"],
       "submission": [],
       "search": [],
       "ask":[],
       "close":[],
       "write":[],
       "hover":[],
-      "paginate":[]     
+      "paginate":[".paginator-list.ul.li.a"]     
     }
   ],
-  "PageView": "",
-  "UCG_container": ""
+  "PageView": "foo",
+  "UCG_container": ".js-review-content-list"
 }
